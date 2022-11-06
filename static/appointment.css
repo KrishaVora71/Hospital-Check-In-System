@@ -1,0 +1,139 @@
+body {
+    font-family: "Raleway", sans-serif;
+    color: #444444;
+    
+}
+a {
+    color: #009cea;
+    text-decoration: none;
+}
+  
+a:hover {
+    color: #1eb4ff;
+    text-decoration: none;
+}
+
+#header {
+    padding-top: 15px;
+    height: 72px;
+    transition: all 0.5s;
+    z-index: 997;
+    transition: all 0.5s;
+    background: #fff;
+  }
+  
+#header.header-scrolled {
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  }
+
+#container{
+    padding: 15px;
+}  
+  
+#navbar {
+    padding: 0;
+}
+  
+#navbar ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+  
+#navbar li {
+    position: relative;
+}
+#navbar a,
+#navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 10px 30px;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  color: #7b909a;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+#navbar a i,
+#navbar a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+
+#navbar a:hover,
+#navbar .active,
+#navbar .active:focus,
+#navbar li:hover>a {
+  color: #009cea;
+}
+label{
+    font-size: 15px;
+    margin: 10px 0;
+}
+#form-signin ::placeholder {
+    font-size: 12px;
+  }
+#submit{
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 3px;
+    transition: 0.5s;
+    color: #fff;
+    background: #009cea;
+    margin-top: 10px;
+    border: none;
+  }
+  
+  #btn:hover {
+    background: #008bd1;
+  }
+  #block{
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("/static/health.jpg") center center no-repeat;
+    background-size: cover;
+  }
+#form-signin {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+#form-signin .form-signin-heading,
+#form-signin .checkbox {
+    margin-bottom: 10px;
+}
+#form-signin .checkbox {
+    font-weight: normal;
+}
+#form-signin .form-control {
+    position: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+}
+#form-signin .form-control:focus {
+    z-index: 1;
+}
+#form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+#form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+#signup{
+    font-size: 20px;
+}

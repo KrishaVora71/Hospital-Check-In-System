@@ -1,0 +1,165 @@
+body {
+    font-family: "Raleway", sans-serif;
+    color: #444444;
+    
+}
+a {
+    color: #009cea;
+    text-decoration: none;
+}
+  
+a:hover {
+    color: #1eb4ff;
+    text-decoration: none;
+}
+
+#header {
+    padding-top: 15px;
+    height: 72px;
+    transition: all 0.5s;
+    z-index: 997;
+    transition: all 0.5s;
+    background: #fff;
+    /* margin-bottom: 10px;
+    padding: 10px; */
+  }
+  
+#header.header-scrolled {
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  }
+
+#container{
+    padding: 15px;
+}  
+  
+#navbar {
+    padding: 0;
+}
+  
+#navbar ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+  
+#navbar li {
+    position: relative;
+}
+#navbar a,
+#navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 10px 30px;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  color: #7b909a;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+#navbar a i,
+#navbar a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+
+#navbar a:hover,
+#navbar .active,
+#navbar .active:focus,
+#navbar li:hover>a {
+  color: #009cea;
+}
+
+#cardHeader{
+  margin-top: 60px;
+      background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("/static/bg1.png") center center;
+      background-size: cover;
+      padding: 80px 0;
+}
+table,th,td{
+    border-bottom: 1px solid #009cea;
+    border-collapse: collapse;
+}
+table{
+    size: 300px;
+    margin-top: 40px;
+}
+th{
+    padding: 20px;
+    text-align: center;
+}
+td{
+    padding: 20px;
+    text-align: center;
+}
+#heading{
+    text-transform: uppercase;
+} 
+#btn {
+    font-family: "Raleway", sans-serif;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 3px;
+    transition: 0.5s;
+    color: #fff;
+    background: #009cea;
+    margin-left:45%;
+  }
+  
+  #btn:hover {
+    background: #008bd1;
+  }
+  #welcome{
+    align-items: center;
+  }
+  #welcome p{
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  #text{
+    font-size: 50px;
+    margin-top: 30px;
+    color: #444444;
+    padding-left: 55%;
+}
+#text p{
+  font-size: 20px;
+  font-weight: lighter;
+}
+#hero .hero-img {
+  text-align: center;
+}
+
+#hero .hero-img img {
+  margin-top: 30px;
+  width: 500px;
+}
+#cont{
+  margin-top: 20px;
+  
+}
+#app{
+  background-color: #b8e6fd;
+  margin-top: 100px;
+  
+}
+
+.sanvicudiee{
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("/static/bg1.png") center center;
+    background-size: cover;
+    padding: 80px 0;
+}
+
+#hehe{
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("/static/bg1.png") center center;
+  background-size: cover;
+  padding: 80px 0;
+}

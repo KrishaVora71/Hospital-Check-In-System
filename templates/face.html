@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Capturing image with webcam</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.25/webcam.min.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/static/face.css ">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous">
+
+</head>
+
+<body>
+    <header id="header" class="fixed-top d-flex align-items-center navbar-dark bg-dark">
+        <div id="container" class="container d-flex align-items-center">
+            <div class="logo me-auto">
+                <h2><a href="index.html">Hospital CheckIn</a></h2>
+            </div>
+
+            <nav id="navbar" class="d-flex flex-wrap justify-content-center py-3 mb-4">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a href="/admin" class="nav-link active" aria-current="page">Home</a>
+                    </li>
+                  
+                </ul>
+
+            </nav>
+        </div>
+    </header>
+    <section id="hero">
+
+        <div class="container" id="cont">
+          <div class="row">
+            <div class="col-lg-8 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column fw-bold justify-content-center" data-aos="fade-up">
+              <div id="text">
+                <h1> <b>Check in</b></h1>
+                <p>Register Yourself With A Quick Snap !</p>
+              </div>
+            </div>
+            <div class="col-lg-4 order-1 order-lg-2 hero-img" data-aos="fade-left">
+              <img src="/static/verf.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+        </div>
+    
+      </section>
+    <!-- <div class="container" id="main">
+        <div class="cont">
+            <div class="container-fluid py-5" id="block">
+                <h1 class="display-5 fw-bold text-center"><b>Check in</b></h1>
+                <p class="display-5 text-center">Register Yourself With A Quick Snap !</p>
+            </div>
+            <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left">
+                <img src="/static/main.jpg" class="img-fluid" alt="">
+              </div>
+        </div>
+         -->
+    <div class="container" id="main">
+        <form method="POST" action="/handle_data">
+            <div class="row">
+                <div class="col-md-6">
+                    <div id="my_camera"></div>
+                    <br />
+
+                    <input type=button id="btn" value="Take Snapshot" onClick="take_snapshot()">
+                    <input type="hidden" name="image" class="image-tag">
+                </div>
+                <div class="col-md-6">
+                    <div id="results">Your captured image will appear here...</div>
+                </div>
+                <div class="col-md-12 text-center">
+                    <a href="#" id="btn" class=" text-center display-5 btn btn-outline-primary" tabindex="-1" role="button" aria-disabled="true">Submit</a>
+
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Configure a few settings and attach camera -->
+    <script language="JavaScript">
+        Webcam.set({
+            width: 430,
+            height: 310,
+            image_format: 'jpeg',
+            jpeg_quality: 90
+        });
+
+        Webcam.attach('#my_camera');
+
+        function take_snapshot() {
+            Webcam.snap(function (data_uri) {
+                $(".image-tag").val(data_uri);
+                document.getElementById('results').innerHTML = '<img src="' + data_uri + '"/>';
+            });
+        }
+    </script>
+
+</body>
+
+</html>
